@@ -17,13 +17,15 @@ class Country:
     def __str__(self):
         return 'Hello from ' + self.name
 
+def getCountries():
+    countries = open("countries_list.txt","r")
+    countryList = []
+    for country in countries:
+        countryList.append(Country(country.strip()))
+    return countryList
 
 def main():
-    # Test the Country-class with some names
-    print(Country('The Netherlands'))
-    print(Country('Belgium'))
-    print(Country('Germany'))
-
+    pass
 
 if __name__ == "__main__":
     main()
